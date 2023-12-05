@@ -2,24 +2,17 @@
 
 public partial class MainPage : ContentPage
 {
-	int count = 0;
+	public List<string> fruitsList = new List<string>()
+	{
+		"Apple", "Banana", "Mango", "Kiwi", "Watermelon", "Guava", "Peach", "Grapes"
+	};
 
 	public MainPage()
 	{
 		InitializeComponent();
+		LvFruit.ItemsSource = fruitsList;
 	}
 
-	private void OnCounterClicked(object sender, EventArgs e)
-	{
-		count++;
-
-		if (count == 1)
-			CounterBtn.Text = $"Clicked {count} time";
-		else
-			CounterBtn.Text = $"Clicked {count} times";
-
-		SemanticScreenReader.Announce(CounterBtn.Text);
-	}
 }
 
 
