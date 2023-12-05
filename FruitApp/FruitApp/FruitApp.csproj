@@ -50,9 +50,6 @@
 
 		<!-- Images -->
 		<MauiImage Include="Resources\Images\*" />
-		<MauiImage Update="Resources\Images\dotnet_bot.png" Resize="True" BaseSize="300,185" />
-
-		<!-- Custom Fonts -->
 		<MauiFont Include="Resources\Fonts\*" />
 
 		<!-- Raw Assets (also remove the "Resources\Raw" prefix) -->
@@ -65,4 +62,32 @@
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <None Remove="Resources\Images\watermelon.png" />
+	  <None Remove="Resources\Images\strawberry.png" />
+	  <None Remove="Resources\Images\pineapple.png" />
+	  <None Remove="Resources\Images\peach.png" />
+	  <None Remove="Resources\Images\orange.png" />
+	  <None Remove="Resources\Images\mango.png" />
+	  <None Remove="Resources\Images\kiwi.png" />
+	  <None Remove="Resources\Images\guava.png" />
+	  <None Remove="Resources\Images\grapes.png" />
+	  <None Remove="Resources\Images\banana.png" />
+	  <None Remove="Resources\Images\apricot.png" />
+	  <None Remove="Resources\Images\apple.png" />
+	</ItemGroup>
+	<ItemGroup>
+	  <BundleResource Include="Resources\Images\watermelon.png" />
+	  <BundleResource Include="Resources\Images\strawberry.png" />
+	  <BundleResource Include="Resources\Images\pineapple.png" />
+	  <BundleResource Include="Resources\Images\peach.png" />
+	  <BundleResource Include="Resources\Images\orange.png" />
+	  <BundleResource Include="Resources\Images\mango.png" />
+	  <BundleResource Include="Resources\Images\kiwi.png" />
+	  <BundleResource Include="Resources\Images\guava.png" />
+	  <BundleResource Include="Resources\Images\grapes.png" />
+	  <BundleResource Include="Resources\Images\banana.png" />
+	  <BundleResource Include="Resources\Images\apricot.png" />
+	  <BundleResource Include="Resources\Images\apple.png" />
+	</ItemGroup>
 </Project>

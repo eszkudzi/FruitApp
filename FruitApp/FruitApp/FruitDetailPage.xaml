@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FruitApp.FruitDetailPage">
+    <Grid RowDefinitions="Auto,Auto,*"
+          Padding="10">
+        <Label x:Name="LblFruitName"
+               TextColor="Black"
+               FontSize="Title"
+               Grid.Row="1"/>
+        <Image x:Name="ImgFruit"
+               HeightRequest="500"
+               Grid.Row="0"/>
+        <Label x:Name="LblFruitSentence"
+               TextColor="Black"
+               FontSize="Subtitle"
+               Grid.Row="2"/>
+    </Grid>
+</ContentPage>
