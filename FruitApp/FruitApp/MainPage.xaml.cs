@@ -24,11 +24,21 @@ public partial class MainPage : ContentPage
 		LvFruit.ItemsSource = fruitsList;
 	}
 
-    void LvFruit_ItemSelected(System.Object sender, Microsoft.Maui.Controls.SelectedItemChangedEventArgs e)
+    void LvFruit_SelectionChanged(System.Object sender, Microsoft.Maui.Controls.SelectionChangedEventArgs e)
+    {
+        var selectedItem = e.CurrentSelection.FirstOrDefault() as Fruit;
+        if (selectedItem == null) return;
+        Navigation.PushAsync(new FruitDetailPage(selectedItem));
+        ((CollectionView)sender).SelectedItem = null;
+    }
+
+    /*void LvFruit_ItemSelected(System.Object sender, Microsoft.Maui.Controls.SelectedItemChangedEventArgs e)
     {
         var selectedItem = e.SelectedItem as Fruit;
+        if (selectedItem == null) return;
         Navigation.PushAsync(new FruitDetailPage(selectedItem));
-    }
+        ((ListView)sender).SelectedItem = null;
+    }*/
 }
 
 

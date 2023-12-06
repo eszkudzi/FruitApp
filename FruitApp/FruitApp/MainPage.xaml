@@ -4,25 +4,29 @@
              x:Class="FruitApp.MainPage"
              NavigationPage.HasNavigationBar="False">
     <ScrollView>
-        <ListView x:Name="LvFruit"
-                  HasUnevenRows="True"
-                  ItemSelected="LvFruit_ItemSelected">
-            <ListView.ItemTemplate>
+        <CollectionView x:Name="LvFruit"
+                        SelectionChanged="LvFruit_SelectionChanged"
+                        SelectionMode="Single">
+            <CollectionView.ItemsLayout>
+                <GridItemsLayout Orientation="Vertical"
+                                 Span="2"/>
+            </CollectionView.ItemsLayout>
+           <CollectionView.ItemTemplate>
                 <DataTemplate>
-                    <ViewCell>
+
                         <VerticalStackLayout Margin="20"
                                              Padding="20">
                             <Image HeightRequest="60"
                                    WidthRequest="60"
                                    Source="{Binding ImageName}"/>
                             <Label FontSize="Medium"
-                                   Text="{Binding Name}"/>
+                                   Text="{Binding Name}"
+                                   HorizontalOptions="Center"/>
 
                         </VerticalStackLayout>
-                    </ViewCell>
                 </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
     </ScrollView>
 
 </ContentPage>
